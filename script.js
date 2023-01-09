@@ -1,6 +1,5 @@
 var counter=0;
 
-
 function setNumber(card){
     var number=card.value
     var current_number=document.getElementById('panel').innerHTML;
@@ -11,16 +10,19 @@ function setNumber(card){
     }
     counter++;
 }
+
 var operation_counter=0;
 var first_number=0;
 var res=0;
 var next_number;
 var last_number;
+
 function doOperation(card){
     var operation=card.value;
     if(operation_counter==0){
         first_number=document.getElementById('panel').innerHTML;
     }
+
     operation_counter++;
     if(operation=='-'){
 
@@ -107,4 +109,5 @@ function doOperation(card){
 function clearPanel(){
     document.getElementById('panel').innerHTML=0;
     counter=0;
+    operation_counter=0;
 }
